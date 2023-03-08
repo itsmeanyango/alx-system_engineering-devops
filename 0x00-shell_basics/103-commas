@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in $(ls -1A | LC_COLLATE=C sort -df); do [ -d "$file" ] && echo -n "${file}/," || echo -n "$file,"; done | sed 's/,$/\n/'
+ls -1Ap | awk '{ORS = (NR%2 == 0)? "\n" : ", "; print}'
