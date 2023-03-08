@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' ./* ../ | sed -e 's/^\.\//.\//' -e 's/^\.\.\//..\/\//' | sort -d -f -k 1.2
+ls -1d .[!.]* * | awk '{print $0"/"}' | LC_COLLATE=C sort -t'/' -k2,2 -k1,1 | tr '\n' ',' | sed 's/,$/\n/'
