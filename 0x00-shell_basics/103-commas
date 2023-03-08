@@ -1,0 +1,3 @@
+#!/bin/bash
+ls -pf | sed '$!N;s/\n/, /' | LC_COLLATE=C sort -dfk1.1 | sed 's/..$//'
+
