@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1Ap | awk '{ORS = (NR%2 == 0)? "\n" : ", "; print}'
+printf '%s\n' ./ ../ $(ls -1 -d * | grep -E '^[0-9a-zA-Z]' | sed -e 's/$/,/' -e '$s/,$/\n/')
