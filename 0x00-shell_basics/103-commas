@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' .[!.]* * | awk '{printf "%s%s", $0, (/\/$/ ? "" : "/")}' | LC_COLLATE=C sort -t'/' -k2,2 -k1,1 | paste -sd ',' -; echo
+printf '%s\n' .[!.]* * | awk '{printf "%s%s", $0, (/\/$/ ? "" : "/")}' | LC_COLLATE=C sort -t'/' -k2,2 -k1,1 | paste -sd ',' -, echo
