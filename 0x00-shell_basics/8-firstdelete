@@ -1,2 +1,2 @@
 #!/bin/bash
-# Delete betty file in /tmp/my_first_directory rm /tmp/my_first_directory/betty
+# rm /tmp/my_first_directory/betty
