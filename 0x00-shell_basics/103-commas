@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -pf | sed '$!N;s/\n/, /' | LC_COLLATE=C sort -dfk1.1 | sed 's/..$//'
+printf '%s\n' "${files[@]}" | LC_COLLATE=C sort -dfk1.1 | awk '{printf "%s, ", $0}' | sed 's/..$//'
