@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -E '^[^:]+:[^:]*:[0-9]{4,5}:' /etc/passwd | sort -t ':' -k 1,1 -k 6,6
